@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ruth gader binsburg</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      img {
+        opacity: calc(100% * 3 / 2);
+        position: fixed;
+        mix-blend-mode: screen;
+      }
+
+      #r {
+        top: 20%;
+        left: 20%;
+      }
+
+      #g {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #b {
+        bottom: 20%;
+        right: 20%;
+      }
+
+      #resize {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <span style="color: red;">r</span>uth
+      <span style="color: green;">g</span>ader
+      <span style="color: blue;">b</span>insburg
+    </h1>
+    <p id="resize">resize your window ↘️</p>
+    <img src="rbg_r.png" id="r" />
+    <img src="rbg_g.png" id="g" />
+    <img src="rbg_b.png" id="b" />
+  </body>
+</html>
