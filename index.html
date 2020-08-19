@@ -42,7 +42,10 @@
           resize.parentNode.removeChild(resize)
         }, 1000)
       }
-      window.addEventListener('resize', onResize)
+
+      setTimeout(function() {
+        window.addEventListener('resize', onResize)
+      }, 1000)
     </script>
   </body>
 </html>
