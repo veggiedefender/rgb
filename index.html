@@ -13,6 +13,16 @@
         position: fixed;
         mix-blend-mode: screen;
       }
+
+      #resize {
+        bottom: 0;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0;
+        margin: 16px;
+        position: fixed;
+        right: 0;
+      }
     </style>
   </head>
   <body>
@@ -21,11 +31,18 @@
       <span style="color: green;">g</span>ader
       <span style="color: blue;">b</span>insburg
     </h1>
-    <p style="position: fixed; bottom: 0; right: 0; margin: 0;">
-      resize your window ↘️
-    </p>
+    <p id="resize">resize your window ↘️</p>
     <img src="rbg_r.png" style="top: 20%; left: 20%;" />
     <img src="rbg_g.png" style="top: 50%; left: 50%; transform: translate(-50%, -50%);" />
     <img src="rbg_b.png" style="bottom: 20%; right: 20%;" />
+    <script>
+      function onResize() {
+        window.removeEventListener('resize', onResize)
+        setTimeout(function() {
+          resize.parentNode.removeChild(resize)
+        }, 1000)
+      }
+      window.addEventListener('resize', onResize)
+    </script>
   </body>
 </html>
